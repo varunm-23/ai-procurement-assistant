@@ -29,6 +29,7 @@ project/
 ├── frontend/
 ├── data/
 ├── README.md
+├── .gitignore
 
 ---
 
@@ -36,9 +37,24 @@ project/
 
 ### 1. Clone Repository
 
-```bash
 git clone <your-github-link>
 cd project
+
+### 2. Backend Setup
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+Backend runs at:
+http://127.0.0.1:8000
+
+Swagger API Docs:
+http://127.0.0.1:8000/docs
+
+### 3. Frontend Setup
+
+Open:
+frontend/index.html
 
 ---
 
