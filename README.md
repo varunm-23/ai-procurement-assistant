@@ -40,6 +40,8 @@ project/
 git clone <your-github-link>
 cd project
 
+---
+
 ## Dataset Setup
 
 The dataset file is not included in this repository because it exceeds GitHub file size limits.
@@ -66,6 +68,8 @@ project/
 ├── frontend/
 ├── data/
 │   └── PURCHASE_ORDER_DATA.csv
+
+---
 
 ### Load Dataset into MongoDB
 
