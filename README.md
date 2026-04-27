@@ -106,6 +106,9 @@ Supported Queries
 5. Lowest spending supplier
 6. Total records count
 7. Show top departments
+
+# The workflow is:
+User Question → FastAPI API → Agent Module → MongoDB Query Generation → Query Execution → Response Formatter → Frontend Display
 ``` bash
 
 
