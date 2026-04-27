@@ -42,6 +42,7 @@ project/
 
 
 ### 2. Backend Setup 
+Terminal 1
 - cd backend
 - pip install -r requirements.txt
 - uvicorn main:app --reload
@@ -53,14 +54,15 @@ Swagger API Docs:
 http://127.0.0.1:8000/docs
 
 ### 3.Run Ollama model
-In New Terminal
+Terminal 2
 - ollama run tinyllama:1.1b
-- 
+  
 ### 4. Frontend Setup
 
 Open:
 frontend/index.html
 
+## Using two terminals for Backend and Running Model better for smooth handling
 ---
 
 ## Dataset Setup
