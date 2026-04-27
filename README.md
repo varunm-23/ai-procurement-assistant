@@ -52,8 +52,11 @@ http://127.0.0.1:8000
 Swagger API Docs:
 http://127.0.0.1:8000/docs
 
-
-### 3. Frontend Setup
+### 3.Run Ollama model
+In New Terminal
+- ollama run tinyllama:1.1b
+- 
+### 4. Frontend Setup
 
 Open:
 frontend/index.html
