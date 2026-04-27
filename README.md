@@ -37,14 +37,14 @@ project/
 
 ### 1. Clone Repository
 
-git clone <your-github-link>
-cd project
+- git clone <your-github-link>
+- cd project
 
 
-### 2. Backend Setup
-cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload
+### 2. Backend Setup 
+- cd backend
+- pip install -r requirements.txt
+- uvicorn main:app --reload
 
 Backend runs at:
 http://127.0.0.1:8000
@@ -84,19 +84,19 @@ project/data/PURCHASE_ORDER_DATA.csv
 
 After placing the dataset file, run:
 
-cd backend
-python load_data.py
-python clean_data.py
+- cd backend
+- python load_data.py
+- python clean_data.py
 
 
 ### Final Structure
-project/
-├── backend/
-├── frontend/
-├── data/
-│   └── PURCHASE_ORDER_DATA.csv
-├── README.md
-├── .gitignore
+- project/
+- ├── backend/
+- ├── frontend/
+- ├── data/
+- │   └── PURCHASE_ORDER_DATA.csv
+- ├── README.md
+- ├── .gitignore
 
 
 ``` bash
