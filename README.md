@@ -40,6 +40,7 @@ project/
 git clone <your-github-link>
 cd project
 
+
 ### 2. Backend Setup
 cd backend
 pip install -r requirements.txt
@@ -50,6 +51,7 @@ http://127.0.0.1:8000
 
 Swagger API Docs:
 http://127.0.0.1:8000/docs
+
 
 ### 3. Frontend Setup
 
@@ -77,21 +79,26 @@ PURCHASE_ORDER_DATA.csv
 
 project/data/PURCHASE_ORDER_DATA.csv
 
-### Final Structure
-
-project/
-├── backend/
-├── frontend/
-├── data/
-│   └── PURCHASE_ORDER_DATA.csv
-
----
 
 ### Load Dataset into MongoDB
 
 After placing the dataset file, run:
 
-```bash
 cd backend
 python load_data.py
 python clean_data.py
+
+
+### Final Structure
+project/
+├── backend/
+├── frontend/
+├── data/
+│   └── PURCHASE_ORDER_DATA.csv
+├── README.md
+├── .gitignore
+
+
+``` bash
+
+
