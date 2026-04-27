@@ -6,25 +6,38 @@ def format_answer(question, result):
     if not result:
         return "No matching records found."
 
+    q = question.lower()
     first = result[0]
 
-    # Spending questions
-    if "spend" in question.lower() or "money" in question.lower():
+    # Total spending
+    if "total spending" in q:
+        return f"Total spending was ${first['total']:,.2f}"
 
-        if "_id" in first and "total_spending" in first:
-            return f"{first['_id']} had the highest spending of ${round(first['total_spending'],2):,}"
+    # Highest supplier
+    if "supplier" in q and "highest" in q:
+        return f"{first['_id']} had the highest spending of ${first['total_spending']:,.2f}"
 
-        if "total" in first:
-            if first["_id"] is None:
-                return f"Total spending was ${round(first['total'],2):,}"
-            return f"{first['_id']} total spending was ${round(first['total'],2):,}"
-        
-        # if "_id" in first and "total" in first:
-        #     return f"{first['_id']} total spending was ${round(first['total'],2):,}"
+    # Highest department
+    if "department" in q:
+        return f"{first['_id']} spent the most with ${first['total_spending']:,.2f}"
 
-    # Count questions
-    if "count" in first:
-        return f"{first['_id']} has {first['count']} records."
+    # Top suppliers
+    if "top 5" in q:
+        msg = "Top 5 suppliers by spending:\n"
+        for i, row in enumerate(result, 1):
+            msg += f"{i}. {row['_id']} - ${row['total_spending']:,.2f}\n"
+        return msg
 
-    # Generic fallback
+    # Count suppliers
+    if "how many suppliers" in q:
+        return f"Total suppliers: {first['count']}"
+
+    # Average
+    if "average" in q:
+        return f"Average purchase amount is ${first['average']:,.2f}"
+
+    # Latest purchases
+    if "latest" in q:
+        return f"I found {len(result)} latest purchases."
+
     return f"I found {len(result)} matching records."
