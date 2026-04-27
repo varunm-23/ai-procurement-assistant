@@ -98,7 +98,14 @@ After placing the dataset file, run:
 - ├── README.md
 - ├── .gitignore
 
-
+Supported Queries
+1. What is total spending?
+2. Which supplier has the highest spending?
+3. Top 5 suppliers by spending
+4. Which department spent the most?
+5. Lowest spending supplier
+6. Total records count
+7. Show top departments
 ``` bash
 
 
